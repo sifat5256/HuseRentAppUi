@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:renthvaen/ui/screen/signupScreen.dart';
+import 'package:renthvaen/ui/screen/signupScreen2.dart';
 
 class ChooseProfileScreen extends StatefulWidget {
   const ChooseProfileScreen({super.key});
@@ -25,7 +26,7 @@ class _ChooseProfileScreenState extends State<ChooseProfileScreen> {
                     children: [
                       GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupScreen2()));
                         },
                         child: Container(
                           color: Colors.greenAccent,

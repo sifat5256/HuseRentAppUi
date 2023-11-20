@@ -16,12 +16,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>const AddNewTaskScreen()));
-        },
-        child: Icon(Icons.add),
-      ),
+
       body: SafeArea(
         child: Column(
           children: [

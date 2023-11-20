@@ -30,6 +30,19 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                         SizedBox(
                           height: 45,
                         ),
+                        Row(
+                          children: [
+                            Text(
+                                "See Your All Notification",
+                                style:Theme.of(context).textTheme.titleMedium
+                            ),
+                            IconButton(onPressed: (){}, icon: Icon(Icons.notification_add_outlined))
+                          ],
+                        ),
+
+                        SizedBox(
+                          height: 45,
+                        ),
                         Text(
                             "Update Profile",
                             style:Theme.of(context).textTheme.titleLarge

@@ -28,7 +28,7 @@ class ProfileSummaryCard extends StatelessWidget {
         style: TextStyle(color: Colors.white),
       ),
       trailing:enableOnTap?const Icon(
-        Icons.arrow_forward,
+        Icons.notification_add_outlined,
         color: Colors.white,
       ):null,
       tileColor: Colors.green,

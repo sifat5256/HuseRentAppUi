@@ -4,14 +4,14 @@ import 'package:renthvaen/ui/screen/selecttypeHouseScreen2.dart';
 
 import '../widget/background_body.dart';
 
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({super.key});
+class SignupScreen2 extends StatefulWidget {
+  const SignupScreen2({super.key});
 
   @override
-  State<SignupScreen> createState() => _SignupScreenState();
+  State<SignupScreen2> createState() => _SignupScreen2State();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _SignupScreen2State extends State<SignupScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -132,7 +132,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder:(context)=>SelectTypeHouseScreen()));
+                        Navigator.push(context, MaterialPageRoute(builder:(context)=>SelectTypeHouseScreen2()));
                       }, child: Icon(Icons.arrow_circle_right_outlined))),
                   const SizedBox(
                     height: 40,
