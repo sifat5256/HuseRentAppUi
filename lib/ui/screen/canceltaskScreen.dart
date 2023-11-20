@@ -31,7 +31,7 @@ class _CanceldTaskScreenState extends State<CanceldTaskScreen> {
                     itemCount: 10,
                     itemBuilder: (context,index){
                       return  TaskItemCard(
-                        taskPosition: 'Cancled',
+                        taskPosition: 'All',
                       );
                     }
                 )

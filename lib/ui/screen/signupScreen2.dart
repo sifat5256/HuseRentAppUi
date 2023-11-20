@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:renthvaen/ui/screen/loginScreen.dart';
 import 'package:renthvaen/ui/screen/selecttypeHouseScreen.dart';
 import 'package:renthvaen/ui/screen/selecttypeHouseScreen2.dart';
 
 import '../widget/background_body.dart';
 
 class SignupScreen2 extends StatefulWidget {
-  const SignupScreen2({super.key});
+  const SignupScreen2({Key? key}) : super(key: key);
 
   @override
   State<SignupScreen2> createState() => _SignupScreen2State();
@@ -27,8 +28,8 @@ class _SignupScreen2State extends State<SignupScreen2> {
                     height: 80,
                   ),
                   Text(
-                      "Join With Us",
-                      style:Theme.of(context).textTheme.titleLarge
+                    "Join With Us",
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(
                     height: 24,
@@ -37,25 +38,27 @@ class _SignupScreen2State extends State<SignupScreen2> {
                     height: 55,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(8)
-
-                    ),
+                        borderRadius: BorderRadius.circular(8)),
                     child: Row(
                       children: [
                         Expanded(
-                            flex:1,
-                            child:Container(
+                            flex: 1,
+                            child: Container(
                               height: 55,
                               decoration: BoxDecoration(
                                   color: Colors.grey,
-                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(8),bottomLeft: Radius.circular(8))
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(8),
+                                      bottomLeft: Radius.circular(8))),
+                              child: Text(
+                                'Photo',
+                                style: TextStyle(color: Colors.white),
                               ),
-                              child: Text('Photo',style: TextStyle(color: Colors.white),),
                               alignment: Alignment.center,
                             )),
                         Expanded(
-                            flex:3,
-                            child:Container(
+                            flex: 3,
+                            child: Container(
                               padding: EdgeInsets.all(8),
                               child: Text('Upload Your Photo'),
                             ))
@@ -66,99 +69,103 @@ class _SignupScreen2State extends State<SignupScreen2> {
                     height: 24,
                   ),
                   TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: const InputDecoration(
-                          hintText: 'Email'
-                      )
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(hintText: 'Email'),
                   ),
                   const SizedBox(
                     height: 24,
                   ),
                   TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: const InputDecoration(
-                          hintText: 'First Name'
-                      )
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(hintText: 'First Name'),
                   ),
                   const SizedBox(
                     height: 24,
                   ),
                   TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: const InputDecoration(
-                          hintText: 'Last Name'
-                      )
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(hintText: 'Last Name'),
                   ),
                   const SizedBox(
                     height: 24,
                   ),
                   TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: const InputDecoration(
-                          hintText: 'Mobile'
-                      )
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(hintText: 'Mobile'),
                   ),
                   const SizedBox(
                     height: 24,
                   ),
                   TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: const InputDecoration(
-                          hintText: 'NID Number'
-                      )
-                  ),
-
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  TextFormField(
-                      obscureText: true,
-                      decoration: const InputDecoration(
-                          hintText: 'Password'
-                      )
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(hintText: 'NID Number'),
                   ),
                   const SizedBox(
                     height: 16,
                   ),
                   TextFormField(
-                      obscureText: true,
-                      decoration: const InputDecoration(
-                          hintText: 'Confirm Password'
-                      )
+                    obscureText: true,
+                    decoration: const InputDecoration(hintText: 'Password'),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  TextFormField(
+                    obscureText: true,
+                    decoration:
+                    const InputDecoration(hintText: 'Confirm Password'),
                   ),
                   const SizedBox(
                     height: 18,
                   ),
+                  // New TextField for selecting area
+                  TextFormField(
+                    keyboardType: TextInputType.text,
+                    decoration: const InputDecoration(
+                      hintText: 'Select Area',
+                      icon: Icon(Icons.sort)
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  // Sort button
+               
+                  const SizedBox(
+                    height: 16,
+                  ),
                   SizedBox(
                       width: double.infinity,
-                      child: ElevatedButton(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder:(context)=>SelectTypeHouseScreen2()));
-                      }, child: Icon(Icons.arrow_circle_right_outlined))),
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SelectTypeHouseScreen2()));
+                          },
+                          child: Icon(Icons.arrow_circle_right_outlined))),
                   const SizedBox(
                     height: 40,
                   ),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Have an account?",
-                        style: TextStyle(
-
-                            fontSize: 16
-                        ),),
-                      TextButton(onPressed: (){
-                        Navigator.pop(context);
-                      },
-                          child:const Text("Sign In",
-                            style: TextStyle(
-                                color: Colors.blue,
-                                fontSize: 16
-                            ),
-                          )),
-
+                      Text(
+                        "Have an account?",
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                        },
+                        child: const Text(
+                          "Sign In",
+                          style: TextStyle(color: Colors.blue, fontSize: 16),
+                        ),
+                      ),
                     ],
                   ),
-
                 ],
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:renthvaen/ui/screen/loginScreen.dart';
 import 'package:renthvaen/ui/screen/selecttypeHouseScreen.dart';
 import 'package:renthvaen/ui/screen/selecttypeHouseScreen2.dart';
 
@@ -111,6 +112,18 @@ class _SignupScreenState extends State<SignupScreen> {
                   const SizedBox(
                     height: 16,
                   ),
+
+                  // New TextField for selecting area
+                  TextFormField(
+                    keyboardType: TextInputType.text,
+                    decoration: const InputDecoration(
+                        hintText: 'Select Area',
+                        icon: Icon(Icons.sort)
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 18,
+                  ),
                   TextFormField(
                       obscureText: true,
                       decoration: const InputDecoration(
@@ -147,7 +160,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             fontSize: 16
                         ),),
                       TextButton(onPressed: (){
-                        Navigator.pop(context);
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
                       },
                           child:const Text("Sign In",
                             style: TextStyle(
